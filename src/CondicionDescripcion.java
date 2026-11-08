@@ -6,6 +6,6 @@ public class CondicionDescripcion extends Condicion {
     }
 
     public boolean cumple(Bono b) {
-        return this.descripcion.contains(b.getDescripcion());
+        return b.getDescripcion().contains(this.descripcion);
     }
 }

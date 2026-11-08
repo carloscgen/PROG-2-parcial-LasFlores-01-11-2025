@@ -9,7 +9,7 @@ public abstract class Elemento {
 
     public abstract double calcular();
 
-    // public abstract List<Elemento> buscar(Condicion c);
+    public abstract List<Elemento> buscar(Condicion c);
 
     public Elemento(String CUIT) {
         this.CUIT = CUIT;

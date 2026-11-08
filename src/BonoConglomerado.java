@@ -51,4 +51,13 @@ public class BonoConglomerado extends Elemento {
         this.elementos.add(e);
     }
 
+    public List<Elemento> buscar(Condicion c) {
+        List<Elemento> res = new ArrayList<>();
+
+        for (Elemento elemento : elementos) {
+            res.addAll(elemento.buscar(c));
+        }
+
+        return res;
+    }
 }

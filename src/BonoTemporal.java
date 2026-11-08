@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BonoTemporal extends Elemento {
     private LocalDate inicio;
@@ -35,10 +37,18 @@ public class BonoTemporal extends Elemento {
     }
 
     public double calcular() {
-        if(isVigente()){
+        if (isVigente()) {
             return bono.calcular();
         }
         return 0;
     }
 
+    public List<Elemento> buscar(Condicion c) {
+        List<Elemento> res = new ArrayList<>();
+        if (isVigente()) {
+            res.addAll(bono.buscar(c));
+        }
+
+        return res;
+    }
 }

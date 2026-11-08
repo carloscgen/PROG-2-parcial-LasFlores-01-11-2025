@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bono extends Elemento {
     private int emision;
     private String descripcion;
@@ -10,6 +13,10 @@ public class Bono extends Elemento {
         this.descripcion = descripcion;
         this.valorNominal = valorNominal;
         this.e1 = e1;
+    }
+
+    public void cambiarEstrategia(Estrategia e){
+        this.e1 = e;
     }
 
     public double getValorNominal() {
@@ -26,6 +33,15 @@ public class Bono extends Elemento {
 
     public double calcular() {
         return e1.calcularRendimiento(this);
+    }
+
+    public List<Elemento> buscar(Condicion c) {
+        List<Elemento> res = new ArrayList<>();
+
+        if(c.cumple(this)){
+            res.add(this);
+        }
+        return res;
     }
 
 }
