@@ -48,6 +48,12 @@ public class BonoConglomerado extends Elemento {
     }
 
     public void agregarElemento(Elemento e) {
+        // ESTO EN CASO DE NO QUERER BONOS CON EL MISMO CUIT
+        for (Elemento elemento : elementos) {
+            if (elemento.getCUIT().equals(e.getCUIT())) {
+                return;
+            }
+        }
         this.elementos.add(e);
     }
 
