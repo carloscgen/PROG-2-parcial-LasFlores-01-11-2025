@@ -7,8 +7,8 @@ public class EstrategiaMontoFijoPorcentaje extends Estrategia {
         this.porcentaje = porcentaje;
     }
 
-    public double calcularRendimiento(Elemento e) {
-        return this.montoFijo + ((e.getValorNominal() * porcentaje) / 100);
+    public double calcularRendimiento(Bono b) {
+        return this.montoFijo + ((b.getValorNominal() * porcentaje) / 100);
     }
 
 }

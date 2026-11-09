@@ -5,7 +5,7 @@ public class EstrategiaMontoFijo extends Estrategia {
         this.montoFijo = montoFijo;
     }
 
-    public double calcularRendimiento(Elemento e) {
+    public double calcularRendimiento(Bono b) {
         return this.montoFijo;
     }
 

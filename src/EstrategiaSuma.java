@@ -7,8 +7,8 @@ public class EstrategiaSuma extends Estrategia {
         this.e2 = e2;
     }
 
-    public double calcularRendimiento(Elemento e) {
-        return e1.calcularRendimiento(e) + e2.calcularRendimiento(e);
+    public double calcularRendimiento(Bono b) {
+        return e1.calcularRendimiento(b) + e2.calcularRendimiento(b);
     }
 
 }

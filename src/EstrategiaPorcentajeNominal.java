@@ -5,7 +5,7 @@ public class EstrategiaPorcentajeNominal extends Estrategia {
         this.porcentaje = porcentaje;
     }
 
-    public double calcularRendimiento(Elemento e) {
-        return (e.getValorNominal() * porcentaje) / 100;
+    public double calcularRendimiento(Bono b) {
+        return (b.getValorNominal() * porcentaje) / 100;
     }
 }

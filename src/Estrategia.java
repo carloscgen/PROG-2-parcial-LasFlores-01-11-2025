@@ -1,5 +1,5 @@
 public abstract class Estrategia {
 
-    public abstract double calcularRendimiento(Elemento e);
+    public abstract double calcularRendimiento(Bono b);
 
 }
